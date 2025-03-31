@@ -2,8 +2,6 @@ name: Build and Push React Docker Image
 
 on:
   push:
-    paths:
-      - 'todo-app-client/**'
     branches:
       - main
 
@@ -27,5 +25,5 @@ jobs:
 
       - name: Build and push Docker image
         run: |
-          docker build -t ${{ secrets.ACR_NAME }}.azurecr.io/react-client:latest ./client
-          docker push ${{ secrets.ACR_NAME }}.azurecr.io/react-client:latest
+          docker build -t ${{ secrets.ACR_NAME }}.azurecr.io/react-client:latest .
+          docker push ${{ secrets.ACR_NAME }}.azurecr.io/todo-app-client:latest
