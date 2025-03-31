@@ -14,7 +14,7 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="nav-brand">
-        <Link to="/">Todo App -New</Link>
+        <Link to="/">Todo App -New change</Link>
       </div>
       <div className="nav-links">
         {token ? (
